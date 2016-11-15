@@ -2,16 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIconFile</key>
+	<string>gnome-terminal</string>
 	<key>CFBundleIdentifier</key>
 	<string>jasper.tandy.tmux</string>
 	<key>CFBundleName</key>
 	<string>tmux</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>CFBundleIconFile</key>
-	<string>gnome-terminal</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2014 Jasper Tandy</string>
+	<key>LBDebugLogEnabled</key>
+	<true/>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Jasper Tandy</string>
+		<key>LBEmail</key>
+		<string>jspr@tndy.me</string>
+		<key>LBRequirements</key>
+		<string>tmux, osascript, iterm</string>
+		<key>LBResult</key>
+		<string>New tab with selected tmux session</string>
+		<key>LBSummary</key>
+		<string>Tries to find tmux sessions to open</string>
+		<key>LBTwitter</key>
+		<string>@jaspertandy</string>
+		<key>LBWebsiteURL</key>
+		<string>http://jasper.tandy.is/</string>
+	</dict>
+	<key>LBRequirements</key>
+	<string>tmux, osascript, iterm</string>
+	<key>LBResult</key>
+	<string>New tab with selected tmux session</string>
 	<key>LBScripts</key>
 	<dict>
 		<key>LBDefaultScript</key>
@@ -22,35 +43,36 @@
 			</array>
 			<key>LBRequiresArgument</key>
 			<true/>
-			<key>LBScriptName</key>
-			<string>default.rb</string>
-			<key>LBReturnsResult</key>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBRunInBackground</key>
 			<true/>
+			<key>LBScriptName</key>
+			<string>run.js</string>
 		</dict>
 		<key>LBSuggestionsScript</key>
 		<dict>
-			<key>LBScriptName</key>
-			<string>suggestions.rb</string>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
 			<key>LBRunInBackground</key>
 			<true/>
+			<key>LBScriptName</key>
+			<string>suggestions.js</string>
 		</dict>
 	</dict>
-	<key>LBDescription</key>
-	<dict>
-		<key>LBSummary</key>
-		<string>Tries to find tmux sessions to open</string>
-		<key>LBRequirements</key>
-		<string>tmux, osascript, iterm</string>
-		<key>LBResult</key>
-		<string>New tab with selected tmux session</string>
-		<key>LBAuthor</key>
-		<string>Jasper Tandy</string>
-		<key>LBEmail</key>
-		<string>jspr@tndy.me</string>
-		<key>LBWebsite</key>
-		<string>http://jasper.tandy.is/</string>
-		<key>LBTwitter</key>
-		<string>@jaspertandy</string>
-	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2014 Jasper Tandy</string>
 </dict>
 </plist>
